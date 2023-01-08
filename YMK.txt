@@ -1,0 +1,269 @@
+package com.mycompany.itmawd11akymmmm;
+
+import java.util.Scanner;
+
+public class ITMAWD11AKymmmm {
+       
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        System.out.println("Select Program");
+        System.out.println("1. Calculator");
+        System.out.println("2. Odd or Even");
+        System.out.println("3. Pyramid");
+        System.out.println("4. Inverted Pyramid");
+        System.out.println("5. Diamond");
+        System.out.println("6. Half Diamond");
+        System.out.println("7. Grade");
+        System.out.println("8. Hallow Diamond");
+        System.out.println("9. M Shape");
+        System.out.println("10. Loop");
+        
+        int choice = a.nextInt();
+        switch(choice){
+            case 1:
+                Calculator();
+                break;
+            case 2:
+                OddEven();
+                break;
+            case 3:
+                Pyramid();
+                break;
+            case 4:
+                InvertedPyramid();
+                break;
+            case 5:
+                Diamond();
+                break;
+            case 6:
+                HalfDiamond();
+                break;
+            case 7:
+                GradeConversion();
+                break;
+            case 8:
+                HallowDiamond();
+                break;
+            case 9: 
+                MShape();
+                break;
+            case 10:
+                Loop();
+                break;
+            default:
+                    System.out.println("Ivalid Choice :>");
+                
+        }
+    }
+    public static void Calculator(){
+        
+    Scanner a = new Scanner(System.in);
+           
+    System.out.println("Enter Number1: ");    
+    int num1 = a.nextInt();
+    
+    System.out.println("Enter Number2; ");    
+    int num2 = a.nextInt();
+  
+    System.out.println("Enter Operator");
+    char choice = a.next().charAt(0);
+   
+    if(choice == '+'){
+          System.out.println("The sum is:" + (num1 + num2));
+      }
+      else if(choice == '-'){
+          System.out.println("The difference is:" + (num1 - num2));
+      }
+      else if(choice == '*'){
+          System.out.println("The product is:" + (num1 * num2));
+      }
+      else if(choice == '/'){
+          System.out.println("The quotient is:" + (num1 / num2));
+      }         
+   
+    }
+    public static void OddEven(){
+    
+    Scanner a = new Scanner(System.in);
+    System.out.println("Enter nummber");
+    int num = a.nextInt();   
+    
+    if(num % 2 == 0)
+    {
+        System.out.println(num +"is Even");
+    }else{
+        System.out.println(num +"is Odd");
+    }
+        
+    }
+    public static void Pyramid(){
+    Scanner a = new Scanner(System.in);
+    
+    System.out.println("Enter Rows");
+    int rows = a.nextInt();
+    
+    for(int x = 0; x <= rows; x++)
+    {
+        for(int y = 0; y<rows-x; y++){
+            System.out.print(" ");
+        }for(int y = 0; y<rows-x; y++)
+        {
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+ }
+      public static void InvertedPyramid(){
+         
+         Scanner a = new Scanner(System.in);
+        System.out.println("Enter Rows");
+        int rows = a.nextInt();
+       for(int x = rows; x>=0; x--){
+           for(int y = 0; y<rows-x; y++){
+               System.out.print(" ");
+           }for(int z = 0; z<=2*x; z++){
+               System.out.print("*");
+           }
+           System.out.println();
+       }
+    } 
+    public static void Diamond(){
+    Scanner a = new Scanner(System.in);
+     System.out.println("Enter Rows");
+     int rows = a.nextInt();
+    for(int x = 0; x<=rows; x++){
+        for(int y = 0; y<rows-x; y++){
+            System.out.print(" ");
+        }for(int z = 0; z<=2*x; z++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+     for(int x = rows; x>=0; x--){
+        for(int y = 0; y<rows-x; y++){
+            System.out.print(" ");
+        }for(int z = 0; z<=2*x; z++){
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+    }  
+    public static void HalfDiamond(){
+    System.out.println("Half Diamond");
+    Scanner a = new Scanner(System.in);
+           System.out.println("Enter Rows");
+           int rows = a.nextInt();
+          for(int x = 0; x<=rows; x++){
+              for(int y = 0; y<rows-x; y++){
+                  System.out.print("*");
+
+              }
+              System.out.println();
+          }
+    }
+    public static void HallowDiamond(){
+       System.out.println("Hallow Diamond");
+        Scanner a = new Scanner(System.in);
+        System.out.println("Enter Rows: ");
+        int rows = a.nextInt();
+        
+        for(int x = 0; x<=rows;x++) {
+            for(int y = 0; y<=rows-x; y++) {
+                System.out.print("*");
+            } for(int z = 0; z<=2*x;z++) {
+                System.out.print(" ");
+            } for(int y = 0; y<=rows-x; y++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int x = rows-1; x>=0;x--) {
+            for(int y = 0; y<=rows-x; y++) {
+                System.out.print("*");
+            } for(int z = 0; z<=2*x;z++) {
+                System.out.print(" ");
+            } for(int y = 0; y<=rows-x; y++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        
+ 
+    }
+    public static void MShape(){
+        System.out.println("M Shape");
+        Scanner z=new Scanner(System.in);
+        int i , j; 
+        System.out.println("Enter the size of your M:");
+        int k = z.nextInt();
+        System.out.println("Enter a symbol");
+        String d = z.next();
+
+        for (i = k; i >= 1; i--) { 
+        System.out.print(d);
+        for (j = k; j > i; j--) {
+        System.out.print(" "); 
+} 
+        for (j = 1; j < 2*i; j++) {
+        if ((j == 1 || j == 2*i-1)) {
+        System.out.print(d);
+        } else {
+        System.out.print(" "); 
+     }
+}
+        for (j = k; j> i; j--) {
+        System.out.print(" "); 
+        } System.out.print(d);
+        System.out.println();
+
+}
+    }   
+     public static void Loop(){
+        System.out.println("While Loop");
+      Scanner a = new Scanner(System.in);
+        System.out.println("How many times do you want to repeat this loop");
+        long num1 = a.nextLong();
+        System.out.println("Enter a number you want to multiply");
+        long num2 = a.nextLong();
+        System.out.println("Enter a number you want to multiply to the answer");
+        long num3 = a.nextLong();
+        
+        while(num1>1){
+            num2*=num3;
+            System.out.println(num2);num1--;
+        }
+                  
+                    
+    
+    
+    }  
+     public static void GradeConversion(){
+        System.out.println("Grade");
+           Scanner a = new Scanner(System.in);
+           System.out.println("Enter Grade");
+           int grade = a.nextInt();
+           if(grade>=98 && grade==100){
+               System.out.println("Grade is equal to 1.00");
+           }else if(grade>=95&& grade<=97){
+               System.out.println("Grade is equal to 1.25");
+           }else if(grade>=92&& grade<=94){
+               System.out.println("Grade is equal to 1.50");
+           }else if(grade>=89&& grade<=91){
+               System.out.println("Grade is equal to 1.75");
+           }else if(grade>=86&& grade<=88){
+               System.out.println("Grade is equal to 2.00");
+           }else if(grade>=83&& grade<=85){
+               System.out.println("Grade is equal to 2.25");
+           }else if(grade>=80&& grade<=82){
+               System.out.println("Grade is equal to 2.50");
+           }else if(grade>=76&& grade<=79){
+               System.out.println("Grade is equal to 2.75");
+           }else if(grade>=75){
+               System.out.println("Grade is equal to 3.00");
+           }else if(grade>=50&& grade<=74){
+               System.out.println("Failed");
+           }else{
+               System.out.println("Invalid Input");
+           }
+    }
+}
